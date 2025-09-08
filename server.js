@@ -54,8 +54,8 @@ app.post('/forget-password', async (req, res) => {
   res.json({ message: 'Password reset email sent successfully' });
 });
 
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-
 app.all('*', (req, res) => {
   res.status(404).json({ error: 'Route not found' });
 });
+
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
